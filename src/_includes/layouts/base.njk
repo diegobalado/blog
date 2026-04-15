@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
+    <meta name="description" content="{{ description or site.description }}">
+    <link rel="stylesheet" href="{{ '/assets/styles.css' | url }}">
+  </head>
+  <body>
+    <header>
+      <h1><a href="{{ '/' | url }}">{{ site.title }}</a></h1>
+      <p>{{ site.description }}</p>
+    </header>
+    <main>
+      {{ content | safe }}
+    </main>
+  </body>
+</html>

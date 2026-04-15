@@ -1,0 +1,10 @@
+:root { color-scheme: light dark; }
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 48rem;
+  padding: 2rem 1rem;
+}
+a { color: inherit; }
+header h1 { margin-bottom: 0.25rem; }

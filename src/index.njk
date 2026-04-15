@@ -1,0 +1,13 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+<h2>Latest Posts</h2>
+<ul>
+  {% for post in collections.post | reverse %}
+    <li>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      <small>{{ post.date.toISOString().slice(0,10) }}</small>
+    </li>
+  {% endfor %}
+</ul>

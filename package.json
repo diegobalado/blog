@@ -1,0 +1,27 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Eleventy blog based on eleventy-excellent starter and deployable to GitHub Pages",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy --pathprefix=/blog/",
+    "dev": "eleventy --serve",
+    "test": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegobalado/blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/diegobalado/blog/issues"
+  },
+  "homepage": "https://github.com/diegobalado/blog#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  },
+  "private": true
+}
