@@ -21,9 +21,9 @@
 <!-- supports both dark and light color schemes, page author prefers light as default. -->
 <meta name="color-scheme" content="light dark" />
 <!-- Helps prevent duplicate content issues -->
-<link rel="canonical" href="{{ meta.url }}{{ page.url }}" />
+<link rel="canonical" href="{{ page.url | url | absoluteUrl(meta.url) }}" />
 <!-- Links to information about the author(s) of the document -->
-<link rel="author" href="humans.txt" />
+<link rel="author" href="/humans.txt" />
 
 {% if personal.platforms.mastodon %}
   <!-- Mastodon verified site -->
@@ -36,7 +36,7 @@
 {% endif %}
 
 <!-- Open Graph meta  -->
-<meta property="og:url" content="{{ meta.url }}{{ page.url }}" />
+<meta property="og:url" content="{{ page.url | url | absoluteUrl(meta.url) }}" />
 <meta property="og:type" content="website" />
 <meta
   property="og:title"
@@ -51,9 +51,9 @@
 <meta
   property="og:image"
   content="{%- if layout == 'post' -%}
-    {{- meta.url -}}/assets/og-images/{{ title | slugify }}-preview.jpeg
+    {{ ('/assets/og-images/' + (title | slugify) + '-preview.jpeg') | url | absoluteUrl(meta.url) }}
   {%- else -%}
-    {{- meta.url -}}{{- meta.opengraph_default -}}
+    {{ meta.opengraph_default | url | absoluteUrl(meta.url) }}
   {%- endif -%}"
 />
 <meta
@@ -84,7 +84,7 @@
 {% endfor %}
 
 <!-- Favicon: https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs -->
-<link rel="icon" href="{{ '/favicon.ico' | url }}" sizes="any" />
-<link rel="icon" href="{{ '/favicon.svg' | url }}" type="image/svg+xml" />
-<link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | url }}" />
-<link rel="manifest" href="{{ '/site.webmanifest' | url }}" />
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />

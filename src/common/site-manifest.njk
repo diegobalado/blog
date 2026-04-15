@@ -6,20 +6,20 @@ excludeFromSitemap: true
 {
   "name": "{{ meta.siteName }} - {{ meta.siteDescription }}",
   "short_name": "{{ meta.siteName }}",
-  "start_url": "{{ meta.url }}",
+  "start_url": "{{ '/' | url }}",
   "icons": [
     {
-      "src": "/icon-192x192.png",
+      "src": "{{ '/icon-192x192.png' | url }}",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/icon-512x512.png",
+      "src": "{{ '/icon-512x512.png' | url }}",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/maskable-icon.png",
+      "src": "{{ '/maskable-icon.png' | url }}",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"

@@ -18,6 +18,7 @@
     "build:11ty": "cross-env ELEVENTY_ENV=production eleventy",
     "start": "npm run dev:11ty",
     "build": "npm run clean && npm run build:11ty",
+    "build:pages": "npm run clean && cross-env ELEVENTY_ENV=production SITE_URL=https://diegobalado.github.io ELEVENTY_PATHPREFIX=/blog eleventy",
     "pa11y:build": "npm run clean && cross-env ELEVENTY_ENV=test eleventy",
     "pa11y:test": "sleep 3 && pa11y-ci --config ./dist/pa11y.json",
     "pa11y:serve": "ELEVENTY_ENV=test eleventy --serve --ignore-initial",

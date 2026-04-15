@@ -11,6 +11,11 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
+const pathPrefix =
+  process.env.ELEVENTY_PATHPREFIX && process.env.ELEVENTY_PATHPREFIX !== '/'
+    ? process.env.ELEVENTY_PATHPREFIX.replace(/\/$/, '')
+    : '/';
+
 // add yaml support
 import yaml from 'js-yaml';
 
@@ -118,6 +123,7 @@ export default async function (eleventyConfig) {
 
   // --------------------- general config
   return {
+    pathPrefix,
     markdownTemplateEngine: 'njk',
 
     dir: {

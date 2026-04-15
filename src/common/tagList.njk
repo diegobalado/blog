@@ -26,8 +26,7 @@ eleventyComputed:
         href="/tags/{{ tag | slugify }}/"
         class="button"
         {{
-          helpers.getLinkActiveState('/tags/' + tag | slugify + '/',
-          page.url)
+          helpers.getLinkActiveState('/tags/' + (tag | slugify) + '/', page.url)
           |
           safe
         }}

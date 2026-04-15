@@ -1,6 +1,11 @@
 import Image from '@11ty/eleventy-img';
 import path from 'node:path';
 
+const pathPrefix =
+  process.env.ELEVENTY_PATHPREFIX && process.env.ELEVENTY_PATHPREFIX !== '/'
+    ? process.env.ELEVENTY_PATHPREFIX.replace(/\/$/, '')
+    : '';
+
 const stringifyAttributes = attributeMap => {
   return Object.entries(attributeMap)
     .map(([attribute, value]) => {

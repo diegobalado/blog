@@ -1,4 +1,8 @@
-export const url = process.env.URL || 'http://localhost:8080';
+export const url = process.env.SITE_URL || process.env.URL || 'http://localhost:8080';
+export const pathPrefix =
+  process.env.ELEVENTY_PATHPREFIX && process.env.ELEVENTY_PATHPREFIX !== '/'
+    ? process.env.ELEVENTY_PATHPREFIX.replace(/\/$/, '')
+    : '';
 // Extract domain from `url`
 export const domain = new URL(url).hostname;
 export const siteName = 'Eleventy Excellent';
@@ -83,7 +87,7 @@ export const greenweb = {
   disclosures: [
     {
       docType: 'sustainability-page',
-      url: `${url}/sustainability/`,
+      url: `${url}${pathPrefix}/sustainability/`,
       domain: domain
     }
   ],
