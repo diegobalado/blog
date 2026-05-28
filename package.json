@@ -1,8 +1,8 @@
 {
-  "name": "eleventy-excellent",
-  "version": "4.5.5",
-  "description": "Eleventy starter built around the workflow suggested by Andy Bell's buildexcellentwebsit.es.",
-  "author": "Lene Saile",
+  "name": "blog-diego-balado",
+  "version": "0.0.1",
+  "description": "Blog de Diego Balado. En construcción.",
+  "author": "Diego Balado",
   "license": "ISC",
   "type": "module",
   "engines": {
@@ -27,7 +27,7 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "https://github.com/madrilene/eleventy-excellent.git"
+    "url": "https://github.com/diegobalado/blog"
   },
   "overrides": {
     "lodash": "4.18.1",

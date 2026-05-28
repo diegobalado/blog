@@ -7,7 +7,7 @@
           ><span class="font-display">{{ meta.siteName }}</span> <small>{{ pkg.version }}</small>
         </a>
 
-        {% for item in navigation.bottom %}
+        <!--{% for item in navigation.bottom %}
           <a
             href="{{ item.url }}"
             {{
@@ -18,12 +18,12 @@
             }}
             >{{ item.text }}</a
           >
-        {% endfor %}
+        {% endfor %}-->
       </nav>
 
       <nav class="cluster" aria-label="{{ meta.navigation.ariaPlatforms }}">
         <!-- gets the first item from the feed loop set in meta -->
-        <a
+        <!--<a
           href="{{ meta.blog.feedLinks[0].url }}"
           rel="alternate"
           type="{{ meta.blog.feedLinks[0].type }}"
@@ -32,7 +32,7 @@
         >
           <span class="visually-hidden">{{ meta.blog.feedLinks[0].title }}</span>
           {% svg "misc/rss" %}
-        </a>
+        </a>-->
 
         {% for key, value in personal.platforms %}
           {% if value != "" %}
@@ -49,12 +49,12 @@
     {% include 'partials/theme-switch.njk' %}
 
     <aside class="creator | cluster gutter-2xs text-step-min-1 mt-xl">
-      Made with <span class="visually-hidden">love</span> <span>{% svg "misc/heart" %}</span> and
+      Hecho con <span class="visually-hidden">amor</span> <span>{% svg "misc/heart" %}</span> y
       <a class="no-indicator" href="https://www.11ty.dev/">
         <span class="visually-hidden">Eleventy</span>
         {% svg "misc/11ty" %}
       </a>
-      by
+      por
       <a href="{{ meta.creator.website }}">{{ meta.creator.name }}</a>
     </aside>
   </div>
