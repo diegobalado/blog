@@ -5,7 +5,7 @@ export const pathPrefix =
     : '';
 // Extract domain from `url`
 export const domain = new URL(url).hostname;
-export const siteName = 'Blog';
+export const siteName = 'J[D)B';
 export const siteDescription = 'Blog personal de Diego Balado. En construcción.';
 export const siteType = 'Person'; // schema
 export const locale = 'en_EN';
