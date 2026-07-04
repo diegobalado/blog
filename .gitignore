@@ -11,3 +11,9 @@ src/_includes/scripts
 
 # secret data
 .env
+
+# analytics
+.unlighthouse/
+
+# config
+.zed

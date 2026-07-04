@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="cluster gutter-xs">
       <nav class="cluster text-step-0" aria-label="{{ meta.navigation.ariaBottom }}">
-        &copy; {% year %}
+       {% year %}
         <a href="/" {{ indicateActiveHome }}
           ><span class="font-display">{{ meta.siteName }}</span> <small>{{ pkg.version }}</small>
         </a>
@@ -49,8 +49,7 @@
     {% include 'partials/theme-switch.njk' %}
 
     <aside class="creator | cluster gutter-2xs text-step-min-1 mt-xl">
-      Hecho con <span class="visually-hidden">amor</span> <span>{% svg "misc/heart" %}</span> y
-      <a class="no-indicator" href="https://www.11ty.dev/">
+      Hecho con <a class="no-indicator" href="https://www.11ty.dev/">
         <span class="visually-hidden">Eleventy</span>
         {% svg "misc/11ty" %}
       </a>
