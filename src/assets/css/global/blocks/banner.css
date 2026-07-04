@@ -1,17 +1,20 @@
 .banner {
-  position: relative;
-  overflow: hidden;
-  background: var(--color-bg);
-  background-image: url('/assets/images/template/banner.webp');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 90vw;
-  max-width: 56rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: var(--space-xl);
+}
+
+.banner__bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 35rem;
+  margin-inline: var(--space-xl);
+  aspect-ratio: 530 / 350;
+  background: var(--color-bg) url('/assets/images/template/banner.webp') center / cover no-repeat;
 }
 
 .banner .section__inner {
@@ -20,6 +23,7 @@
   background: transparent;
 }
 
-.banner h1 {
-  filter: drop-shadow(3px 3px 3px #00322a);
+.banner__title {
+  color: var(--color-light);
+  text-shadow: 0 2px 8px rgba(0, 50, 42, 0.8);
 }
